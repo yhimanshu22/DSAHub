@@ -7,12 +7,13 @@ import { userAtom } from "./store/atoms/user";
 import { Topbar } from "./components/Topbar";
 import { ProblemList } from "./components/ProblemList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { About } from "./components/About";
+
 import { Landing } from "./components/Landing";
 import { Submissions } from "./components/Sumissions";
 import { Leaderboard } from "./components/LeaderBoard";
-import { Legend } from "chart.js";
+
 import { Profile } from "./pages/profile";
+import { Discuss } from "./pages/discuss";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBHhA3o08Nk4GScmhIKykyVAl5XSjJS2Uw",
@@ -109,11 +110,12 @@ function StoreApp() {
           <Topbar />
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/about" element={<About />} />
+
             <Route path="/activity" element={<Submissions />} />
             <Route path="/problems" element={<ProblemList problemList={problemList} />} />
             <Route path="/leaderboard" element={<Leaderboard leaderboard={sampleLeaderboard} />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/discuss" element={<Discuss />} />
           </Routes>
         </Router>
 

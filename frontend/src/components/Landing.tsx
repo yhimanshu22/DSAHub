@@ -1,5 +1,3 @@
-import React from 'react';
-
 const courses = [
     { id: "1", title: "Course 1", description: "Description of course 1." },
     { id: "2", title: "Course 2", description: "Description of course 2." },
@@ -33,13 +31,13 @@ const contests = [
 
 export const Landing = () => {
     return (
-        <div className="flex">
+        <div className="flex bg-gray-800 text-gray-200">
             {/* Left Side: Contest Updates */}
             <div className="w-2/3 p-4">
                 <h2 className="text-2xl font-bold mb-4">Contest Updates</h2>
                 <div className="space-y-4">
                     {contests.map(contest => (
-                        <div key={contest.id} className="bg-white border border-gray-200 shadow-lg p-4">
+                        <div key={contest.id} className="bg-gray-700 border rounded-lg shadow-sm m-4 border-r border-gray-600 text-gray-200 focus:outline-none p-4">
                             <h3 className="text-xl font-medium">{contest.title}</h3>
                             <p className="text-gray-700">{contest.details}</p>
                         </div>
@@ -48,14 +46,15 @@ export const Landing = () => {
             </div>
 
             {/* Vertical Line */}
-            <div className="border-l border-gray-300"></div>
+            <div className="border-l border-gray-600"></div>
 
             {/* Right Side: Course Cards */}
             <div className="w-1/3 p-4">
                 <h2 className="text-2xl font-bold mb-4">Courses</h2>
                 <div className="space-y-4">
                     {courses.map(course => (
-                        <div key={course.id} className="bg-white border border-gray-200 shadow-lg p-4">
+                        <div key={course.id} className="bg-gray-700 border rounded-lg shadow-sm m-4 border-r border-gray-600 text-gray-200 focus:outline-none p-4">
+
                             <h3 className="text-xl font-medium">{course.title}</h3>
                             <p className="text-gray-700">{course.description}</p>
                         </div>
